@@ -50,6 +50,7 @@ namespace officeAPI
                   };
               });
             services.AddScoped<UserRepository>();
+            services.AddScoped<LoginRepository>();
             services.AddControllers();
             services.AddDbContext<MyContexts>(options => options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("officeAPI")));
         }
